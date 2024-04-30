@@ -1,30 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
+<x-layout :showButton="$showButton">
+    <div class="container">
+        <div class="shopli-h1">
+            <h1>Shopping List</h1>
+        </div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping List</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+        <div class="shoplist-items">
+            <table>
+      @foreach ($posts as $post)
+    <tr>
+        <td><a href="show/{{$post->id }}">{{$post->name }}: {{$post-> amount }} </a></td>
+        <td>
+            <form action="/markAsBought/{{$post->id}}" method="POST">
+                @csrf
+                <input type="checkbox" name="bought" onchange="this.form.submit()" {{$post->bought ? 'checked' : ''}}>
+            </form>
+        </td>
+        <td>
+            <form action="/removeItem/{{$post->id}}" method="POST">
+                @csrf
+                <button type="submit">Remove</button>
+            </form>
+        </td>
+    </tr>
+@endforeach
 
-<body>
-    <h1>Shopping list</h1>
-    <a href="/shoplist">Shopping list</a>
-    <a href="create">Create a list</a>
 
-   
+            </table>
+        </div>
+    </div>
     <form action="/logout" method="POST">
-    @csrf
-    <button type="submit">Logout</button>
-</form>
+        @csrf
+        <button class="logout" type="submit">Logout</button>
+    </form>
+</x-layout>
 
 
-    <ul>
-        @foreach ($posts as $post)
-        <li><a href="show/{{$post->id }}">{{$post->name }}: {{$post-> amount }} </a></li>
-        @endforeach
-    </ul>
-</body>
-
-</html>

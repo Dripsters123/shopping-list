@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<x-layout>
+    <h1>Add Shopping list</h1>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create</title>
-     <link rel="stylesheet" href="style.css">
-</head>
-<h1>Create a shopping list</h1>
 
-<body>
-    <form method="POST" action="/store">
+<form method="POST" action="/store">
         @csrf
         <label>
             Name of the product:
@@ -22,6 +14,4 @@
         </label>
         <button>Create</button>
     </form>
-</body>
-
-</html>
+</x-layout>

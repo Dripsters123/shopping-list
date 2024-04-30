@@ -1,5 +1,4 @@
-<!-- resources/views/auth/register.blade.php -->
-
+<link href="{{ asset('style.css') }}" rel="stylesheet">
 <form method="POST" action="{{ route('register') }}">
     @csrf
 

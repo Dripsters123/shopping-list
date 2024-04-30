@@ -18,6 +18,8 @@ Route::post('/', [LoginController::class, 'login'])->name('doLogin')->middleware
 Route::get('/logout', [LogoutController::class, 'logout'])->name('logout')->middleware('auth');
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout')->middleware('auth');
 
+Route::post('/markAsBought/{id}', [PostController::class, 'markAsBought']);
+Route::post('/removeItem/{id}', [PostController::class, 'removeItem']);
 
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register')->middleware('guest');
 Route::post('/register', [RegisterController::class, 'register'])->name('doRegister')->middleware('guest');

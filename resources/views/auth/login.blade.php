@@ -2,7 +2,9 @@
 <html>
 <head>
     <title>Login</title>
+    
 </head>
+<link href="{{ asset('style.css') }}" rel="stylesheet">
 <body>
     <h2>Login</h2>
 

@@ -1,3 +1,89 @@
-:root {
-    background-color: bisque;
+body {
+    margin: 0;
+    background-color: rgb(237, 222, 206);
+}
+nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: darksalmon;
+    display: flex;
+}
+nav a {
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: rgb(14, 13, 13);
+    text-align: center;
+    float: left;
+    border-right: 1px solid rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    font-size: 30px;
+    flex: 1;
+}
+nav a:last-child {
+    border-right: none;
+}
+a {
+    text-decoration: none;
+}
+nav a:hover {
+    background-color: #269e98;
+}
+.create-button {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    border: solid 1px black;
+    outline: solid 1px black;
+    color: white;
+    background-color: #ffa600;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.create-button:hover {
+    background-color: #45a049;
+}
+.shopli-h1 {
+    background-color: sienna;
+    border: solid 1px black;
+    display: block;
+    padding: 10px;
+    color: white;
+}
+
+.container {
+    background-color: lightcoral;
+    text-align: center;
+    width: 600px;
+    align-items: center;
+    margin: 30px auto;
+    border: solid 2px black;
+    overflow: auto;
+}
+
+.shoplist-items {
+    font-size: 30px;
+    justify-content: space-between;
+}
+
+.shoplist-items table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.shoplist-items td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
 }
