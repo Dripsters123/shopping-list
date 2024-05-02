@@ -28,6 +28,12 @@
             </table>
         </div>
     </div>
+    <div class="clear-but">
+           <form action="/clearList" method="POST">
+        @csrf
+        <button type="submit">Clear the list</button>
+    </form>
+    </div>
     <form action="/logout" method="POST">
         @csrf
         <button class="logout" type="submit">Logout</button>

@@ -3,7 +3,6 @@ body {
     background-color: rgb(237, 222, 206);
 }
 nav {
-    list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -17,7 +16,6 @@ nav a {
     color: rgb(14, 13, 13);
     text-align: center;
     float: left;
-    border-right: 1px solid rgb(0, 0, 0);
     border-bottom: 1px solid rgb(0, 0, 0);
     font-size: 30px;
     flex: 1;
@@ -32,8 +30,8 @@ nav a:hover {
     background-color: #269e98;
 }
 .create-button {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     position: fixed;
     bottom: 100px;
     right: 100px;
@@ -46,16 +44,17 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 80px;
+    font-size: 100px;
     border-radius: 50%;
     transition: background-color 0.3s;
+    cursor: pointer;
 }
 
 .create-button:hover {
     background-color: #45a049;
 }
 .shopli-h1 {
-    background-color: sienna;
+    background-color: rgb(230, 118, 67);
     border: solid 1px black;
     display: block;
     padding: 10px;
@@ -63,11 +62,11 @@ nav a:hover {
 }
 
 .container {
-    background-color: lightcoral;
+    background-color: rgb(248, 103, 103);
     text-align: center;
     width: 600px;
     align-items: center;
-    margin: 30px auto;
+    margin: 40px auto;
     border: solid 2px black;
     overflow: auto;
 }
@@ -86,4 +85,88 @@ nav a:hover {
     border: 1px solid black;
     padding: 10px;
     text-align: center;
+}
+.logout {
+    width: 120px;
+    height: 120px;
+    position: fixed;
+    bottom: 100px;
+    left: 100px;
+    border: solid 1px black;
+    outline: solid 1px black;
+    color: white;
+    background-color: #ff0000;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+.logout:hover {
+    background-color: #45a049;
+}
+.clear-but {
+    display: flex;
+    justify-content: center;
+}
+.clear-but button {
+    color: white;
+    background-color: #ff0000;
+    border-radius: 10px;
+    font-size: 20px;
+    border: solid 1px black;
+}
+.containers {
+    background-color: silver;
+    text-align: center;
+    width: 500px;
+    align-items: center;
+    margin: 40px auto;
+    border: solid 2px black;
+    overflow: auto;
+    border-radius: 10px;
+}
+
+.h1-pages {
+    text-align: center;
+}
+
+.input-container input {
+    border: 2px solid #000;
+    width: 400px;
+    border-radius: 10px;
+    height: 50px;
+}
+
+.input-container input[type="submit"] {
+    width: 200px;
+    margin-top: 10px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.register-button input[type="button"] {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 26px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    cursor: pointer;
+}
+
+.input-container label {
+    font-size: 26px;
+}
+
+.input-container input[type="email"],
+.input-container input[type="password"] {
+    font-size: 18px;
 }

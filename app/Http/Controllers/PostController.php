@@ -44,5 +44,32 @@ public function removeItem($id)
     $post->delete();
     return redirect('/shoplist');
 }
+public function clearList()
+{
+    $posts = Post::where('user_id', Auth::id())->get();
+    foreach ($posts as $post) {
+        $post->delete();
+    }
+    return redirect('/shoplist');
+}
+public function edit($id)
+{
+    $post = Post::find($id);
+    return view("posts.edit", ["post" => $post]);
+}
+
+public function update(Request $request, $id)
+{
+    $post = Post::find($id);
+    $post->name = $request->name;
+    $post->amount = $request->amount;
+    $post->save();
+    return redirect("/shoplist");
+}
+
 
 }
+
+
+
+

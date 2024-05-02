@@ -1,41 +1,31 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Login</title>
-    
-</head>
 <link href="{{ asset('style.css') }}" rel="stylesheet">
-<body>
-    <h2>Login</h2>
 
+<h1 class="h1-pages">Login</h1>
+
+<div class="containers">
     <form method="POST" action="{{ route('doLogin') }}">
-
         @csrf
 
-        <div>
-            <label for="email">Email</label>
-            <input id="email" type="email" name="email" value="{{ old('email') }}" required autofocus>
-        </div>
+        <div class="input-container">
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" value="{{ old('email') }}" required autofocus><br>
 
-        <div>
-            <label for="password">Password</label>
-            <input id="password" type="password" name="password" required>
-        </div>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br>
 
-        <div>
-            <button type="submit">Login</button>
+            <input type="submit" value="Login">
         </div>
     </form>
-@if (session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-@endif
 
-    <div>
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+
+    <div class="register-button">
         <a href="{{ route('register') }}">
-            <button type="button">Register</button>
+            <input type="button" value="Register">
         </a>
     </div>
-</body>
-</html>
+</div>

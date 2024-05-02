@@ -1,18 +1,25 @@
 <link href="{{ asset('style.css') }}" rel="stylesheet">
-<form method="POST" action="{{ route('register') }}">
-    @csrf
 
-    <label for="name">Name</label>
-    <input id="name" type="text" name="name" value="{{ old('name') }}" required autofocus>
+<h1 class="h1-pages">Register</h1>
 
-    <label for="email">E-Mail Address</label>
-    <input id="email" type="email" name="email" value="{{ old('email') }}" required>
+<div class="containers">
+    <form method="POST" action="{{ route('register') }}">
+        @csrf
 
-    <label for="password">Password</label>
-    <input id="password" type="password" name="password" required>
+        <div class="input-container">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" value="{{ old('name') }}" required autofocus><br>
 
-    <label for="password-confirm">Confirm Password</label>
-    <input id="password-confirm" type="password" name="password_confirmation" required>
+            <label for="email">E-Mail Address:</label><br>
+            <input type="email" id="email" name="email" value="{{ old('email') }}" required><br>
 
-    <button type="submit">Register</button>
-</form>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br>
+
+            <label for="password-confirm">Confirm Password:</label><br>
+            <input type="password" id="password-confirm" name="password_confirmation" required><br>
+
+            <input type="submit" value="Register">
+        </div>
+    </form>
+</div>

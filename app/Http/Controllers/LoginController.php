@@ -16,9 +16,8 @@ public function showLoginForm()
 }
   public function login(Request $request)
 {
-    //Šitā lietiņa dabū email un password
     $credentials = $request->only('email', 'password');
-    // Karoč authentificē user un ifs vienkārši pārbauda , ja logins ir veiksmīgs tad redirectos
+   
     if (Auth::attempt($credentials)) {
        
         return redirect()->intended('/shoplist');
