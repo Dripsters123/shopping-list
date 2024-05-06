@@ -2,11 +2,11 @@
 
 <h1 class="h1-pages">Register</h1>
 
-<div class="containers">
+<div class="reg-container">
     <form method="POST" action="{{ route('register') }}">
         @csrf
 
-        <div class="input-container">
+        <div class="input-reg">
             <label for="name">Name:</label><br>
             <input type="text" id="name" name="name" value="{{ old('name') }}" required autofocus><br>
 

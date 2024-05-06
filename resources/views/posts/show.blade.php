@@ -1,7 +1,7 @@
 <link href="{{ asset('style.css') }}" rel="stylesheet">
 <x-layout>
     <title>{{ $post -> title }}</title>
-    <h1>{{ $post -> name }} {{ $post -> amount }}</h1>
-    <a href="/edit/{{ $post->id }}">Edit</a>
+    <h1 class="h1-pages">{{ $post -> name }} {{ $post -> amount }}</h1>
+    <a class="show-a" href="/edit/{{ $post->id }}">Interact with the product</a>
 
 </x-layout>

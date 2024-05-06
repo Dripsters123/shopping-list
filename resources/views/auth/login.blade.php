@@ -2,11 +2,11 @@
 
 <h1 class="h1-pages">Login</h1>
 
-<div class="containers">
+<div class="login-container">
     <form method="POST" action="{{ route('doLogin') }}">
         @csrf
 
-        <div class="input-container">
+        <div class="input-login">
             <label for="email">Email:</label><br>
             <input type="email" id="email" name="email" value="{{ old('email') }}" required autofocus><br>
 

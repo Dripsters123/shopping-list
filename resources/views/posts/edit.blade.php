@@ -10,7 +10,6 @@
             <input type="text" id="name" name="name" value="{{ $post->name }}"><br>
         
         
-        
             <label for="amount">Amount:</label><br>
             <input type="number" id="amount" name="amount" value="{{ $post->amount }}"><br>
     

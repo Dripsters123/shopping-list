@@ -8,12 +8,18 @@
 </head>
 <body>
     <nav>
-    <a  href="/shoplist">Main Page</a>
-    @isset($showButton)
-        @if($showButton)
-           <a href="create" class="create-button">+</a>
-        @endif
-    @endisset
+        <a class="main-page" href="/shoplist">Main Page</a>
+        @isset($showButton)
+            @if($showButton)
+                <a href="create" class="create-button">+</a>
+            @endif
+        @endisset
+        <div class="username">
+            User:
+            @if(Auth::check())
+                {{ Auth::user()->name }}
+            @endif
+        </div>
     </nav>
 
     {{ $slot }}
