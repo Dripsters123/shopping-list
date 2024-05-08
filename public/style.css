@@ -100,7 +100,6 @@ nav a:hover {
     align-items: center;
     margin: 40px auto;
     border: solid 2px black;
-    overflow: auto;
     border-radius: 10px;
     font-size: 40px;
 }
@@ -109,7 +108,7 @@ nav a:hover {
     width: 400px;
     height: 50px;
 }
-.input-login input[type="submit"] {
+.input-login button {
     width: 200px;
     margin-top: 20px;
     height: 40px;
@@ -124,7 +123,6 @@ nav a:hover {
     align-items: center;
     margin: 40px auto;
     border: solid 2px black;
-    overflow: auto;
     border-radius: 10px;
     font-size: 30px;
 }
@@ -133,7 +131,12 @@ nav a:hover {
     width: 400px;
     height: 50px;
 }
-.input-reg input[type="submit"] {
+.register-button
+{
+    border-radius: 10px;
+    font-size: 20px;
+}
+.input-reg button {
     width: 200px;
     margin-top: 20px;
     height: 30px;
@@ -237,8 +240,8 @@ nav a:hover {
 
 @media screen and (min-width: 901px) {
     .container {
-        width: 600px;
-        height: 500px;
+        width: 30%;
+        height: 50vh;
     }
     .containers {
         width: 500px;

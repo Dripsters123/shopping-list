@@ -19,7 +19,7 @@
             <label for="password-confirm">Confirm Password:</label><br>
             <input type="password" id="password-confirm" name="password_confirmation" required><br>
 
-            <input type="submit" value="Register">
+            <button>Register</button>
         </div>
     </form>
 </div>

@@ -13,19 +13,20 @@
             <label for="password">Password:</label><br>
             <input type="password" id="password" name="password" required><br>
 
-            <input type="submit" value="Login">
+            <button>Login</button>
         </div>
     </form>
 
+
     @if (session('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
-        </div>
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
     @endif
 
     <div class="register-button">
         <a href="{{ route('register') }}">
-            <input type="button" value="Register">
+            <button>Register</button>
         </a>
     </div>
 </div>
