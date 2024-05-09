@@ -1,6 +1,6 @@
 <link href="{{ asset('style.css') }}" rel="stylesheet">
 
-<h1 class="h1-pages">Register</h1>
+<h1 class="h1-reg">Register</h1>
 
 <div class="reg-container">
     <form method="POST" action="{{ route('register') }}">
@@ -19,7 +19,7 @@
             <label for="password-confirm">Confirm Password:</label><br>
             <input type="password" id="password-confirm" name="password_confirmation" required><br>
 
-            <button>Register</button>
+            <input type="submit" value="Register">
         </div>
     </form>
 </div>
