@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yes</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>
+    @auth
     <nav>
         <a class="main-page" href="/shoplist">Main Page</a>
         @isset($showButton)
@@ -21,7 +22,7 @@
             @endif
         </div>
     </nav>
-
+    @endauth
     {{ $slot }}
 </body>
 </html>

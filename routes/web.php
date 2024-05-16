@@ -19,6 +19,8 @@ Route::post("/update/{id}", [PostController::class, "update"])->middleware('auth
 Route::post('/markAsBought/{id}', [PostController::class, 'markAsBought']);
 Route::post('/removeItem/{id}', [PostController::class, 'removeItem']);
 Route::post('/clearList', [PostController::class, 'clearList']);
+Route::post('/confirmAndClearList', [PostController::class, 'confirmAndClearList']);
+
 
 Route::get('/', [LoginController::class, 'showLoginForm'])->name('login')->middleware('guest');
 Route::post('/', [LoginController::class, 'login'])->name('doLogin')->middleware('guest');

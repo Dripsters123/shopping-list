@@ -1,4 +1,4 @@
-<link href="{{ asset('style.css') }}" rel="stylesheet">
+
 <x-layout>
     <h1 class="h1-pages">Modify Product Details</h1>
     <div class="containers">

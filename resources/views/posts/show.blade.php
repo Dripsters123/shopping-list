@@ -1,4 +1,4 @@
-<link href="{{ asset('style.css') }}" rel="stylesheet">
+
 <x-layout>
     <title>{{ $post -> title }}</title>
     <h1 class="h1-pages">{{ $post -> name }}: {{ $post -> amount }}</h1>
