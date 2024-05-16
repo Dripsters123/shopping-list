@@ -1,9 +1,9 @@
-
 <x-layout>
     <h1 class="h1-pages">Modify Product Details</h1>
     <div class="containers">
     <form method="POST" action="/update/{{ $post->id }}">
         @csrf
+        @method('PUT')
         
         <div class="input-container">
             <label for="name">Product Name:</label><br>

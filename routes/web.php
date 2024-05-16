@@ -14,7 +14,8 @@ Route::get("/create", [PostController::class, "create"])->middleware('auth');
 Route::post("/store", [PostController::class, "store"])->middleware('auth');
 
 Route::get("/edit/{id}", [PostController::class, "edit"])->middleware('auth');
-Route::post("/update/{id}", [PostController::class, "update"])->middleware('auth');
+Route::put("/update/{id}", [PostController::class, "update"])->middleware('auth');
+
 
 Route::post('/markAsBought/{id}', [PostController::class, 'markAsBought']);
 Route::post('/removeItem/{id}', [PostController::class, 'removeItem']);

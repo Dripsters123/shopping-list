@@ -79,24 +79,25 @@ class PostController extends Controller
         return view("posts.edit", ["post" => $post]);
     }
 
-    public function update(Request $request, $id)
-    {
-        $messages = [
-            'name.not_in' => 'Cannot add the same product',
-        ];
+   public function update(Request $request, $id)
+{
+    $messages = [
+        'name.not_in' => 'Cannot add the same product',
+    ];
 
-        $request->validate([
-            'name' => 'required|regex:/^[\pL\s\-]+$/u|not_in:' . implode(',', Post::where('user_id', Auth::id())->pluck('name')->toArray()),
-            'amount' => 'required|numeric|min:1',
-        ], $messages);
+    $request->validate([
+        'name' => 'required|regex:/^[\pL\s\-]+$/u|not_in:' . implode(',', Post::where('user_id', Auth::id())->where('id', '!=', $id)->pluck('name')->toArray()),
+        'amount' => 'required|numeric|min:1',
+    ], $messages);
 
-        $post = Post::find($id);
-        $post->name = ucfirst($request->name);
-        $post->amount = $request->amount;
-        $post->save();
+    $post = Post::find($id);
+    $post->name = ucfirst($request->name);
+    $post->amount = $request->amount;
+    $post->save();
 
-        return redirect("/shoplist");
-    }
+    return redirect("/shoplist");
+}
+
 
     public function confirmAndClearList(Request $request)
     {
